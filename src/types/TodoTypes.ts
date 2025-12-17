@@ -23,6 +23,17 @@ export interface Todo {
     updatedAt: Date;
 }
 
+//로컬스토리지에서 가져올 저장된 todo
+export interface StoredTodo {
+    id: string;
+    title: string;
+    description?: string;
+    completed: boolean;
+    priority: TodoPriority;
+    createdAt: string;
+    updatedAt: string;
+}
+
 //todo 생성 시 필요한 데이터(id, 날짜 제외)
 export type CreateTodoInput = Omit<Todo, "id" | "createdAt" | "updatedAt">;
 
