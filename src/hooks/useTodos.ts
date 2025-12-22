@@ -4,7 +4,9 @@ import { getTodosFromStorage, saveTodosToStorage } from "../utils/StorageUtils";
 import { filterTodos, generateId } from "../utils/TodoUtils";
 
 export const useTodos = () => {
-    const [todos, setTodos] = useState<Todo[]>([]);
+    const [todos, setTodos] = useState<Todo[]>(() => {
+        return getTodosFromStorage();
+    });
     const [filter, setFilter] = useState<TodoFilter>({ status: TodoStatus.ALL });
 
     //초기 로드
