@@ -1,12 +1,12 @@
 import { ChangeEvent, useState } from "react";
-import { Todo, TodoPriority, UpdatedTodoInput } from "../types/TodoTypes";
+import { Todo, TodoPriority, UpdateTodoInput } from "../types/TodoTypes";
 import { PRIORITY_COLORS, PRIORITY_LABELS } from "../constants/TodoConstants";
 import { formatDate } from "../utils/TodoUtils";
 
 interface TodoItemProps {
     todo: Todo;
     onToggle: (id: string) => void;
-    onUpdate: (id: string, input: UpdatedTodoInput) => void;
+    onUpdate: (id: string, input: UpdateTodoInput) => void;
     onDelete: (id: string) => void;
 }
 

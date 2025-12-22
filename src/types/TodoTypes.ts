@@ -38,7 +38,7 @@ export interface StoredTodo {
 export type CreateTodoInput = Omit<Todo, "id" | "createdAt" | "updatedAt">;
 
 //todo 수정 시 필요한 데이터(부분 업데이트 가능)
-export type UpdatedTodoInput = Partial<Omit<Todo, "id" | "createdAt">>;
+export type UpdateTodoInput = Partial<Omit<Todo, "id" | "createdAt">>;
 
 //필터 관련 타입
 export interface TodoFilter {

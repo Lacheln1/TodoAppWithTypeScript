@@ -1,10 +1,10 @@
-import { Todo, UpdatedTodoInput } from "../types/TodoTypes";
+import { Todo, UpdateTodoInput } from "../types/TodoTypes";
 import { TodoItem } from "./TodoItem";
 
 interface TodoListProps {
     todos: Todo[];
     onToggle: (id: string) => void;
-    onUpdate: (id: string, input: UpdatedTodoInput) => void;
+    onUpdate: (id: string, input: UpdateTodoInput) => void;
     onDelete: (id: string) => void;
 }
 

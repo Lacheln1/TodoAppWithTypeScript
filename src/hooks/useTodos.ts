@@ -1,11 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import {
-    CreateTodoInput,
-    Todo,
-    TodoFilter,
-    TodoStatus,
-    UpdatedTodoInput,
-} from "../types/TodoTypes";
+import { CreateTodoInput, Todo, TodoFilter, TodoStatus, UpdateTodoInput } from "../types/TodoTypes";
 import { getTodosFromStorage, saveTodosToStorage } from "../utils/StorageUtils";
 import { filterTodos, generateId } from "../utils/TodoUtils";
 
@@ -36,7 +30,7 @@ export const useTodos = () => {
     }, []);
 
     //todo 수정
-    const updateTodo = useCallback((id: string, input: UpdatedTodoInput) => {
+    const updateTodo = useCallback((id: string, input: UpdateTodoInput) => {
         setTodos((prev) =>
             prev.map((todo) =>
                 todo.id === id ? { ...todo, ...input, updatedAt: new Date() } : todo
