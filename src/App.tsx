@@ -21,10 +21,8 @@ function App() {
             <div className="max-w-4xl mx-auto">
                 {/* 헤더 */}
                 <header className="text-center mb-8">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-2">Todo List</h1>
-                    <p className="text-gray-600">
-                        타입스크립트, tailwind를 활용한 투두리스트 만들기
-                    </p>
+                    <h1 className="text-4xl font-bold text-gray-800 mb-2">TodoList</h1>
+                    <p className="text-gray-600">타입스크립트, tailwind를 활용한 TodoList 만들기</p>
                 </header>
 
                 {/* 할 일 추가 폼 */}
